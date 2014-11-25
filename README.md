@@ -16,7 +16,7 @@ The `proj::epsg` definition allows you to add projections to an EPSG file:
 ```puppet
 proj::epsg { '900913':
   ensure         => 'present',
-  file           => '/home/rpinson/bas/augeas/epsg/epsg',
+  file           => '/opt/myepsg',
   options        => {
      "+proj"     => "merc",
      "+a"        => "6378137",
