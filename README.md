@@ -9,6 +9,31 @@ The proj module allows to configure the [PROJ](http://trac.osgeo.org/proj/) libr
 
 ## Usage
 
+### proj::epsg
+
+The `proj::epsg` definition allows you to add projections to an EPSG file:
+
+```puppet
+proj::epsg { '900913':
+  ensure         => 'present',
+  file           => '/home/rpinson/bas/augeas/epsg/epsg',
+  options        => {
+     "+proj"     => "merc",
+     "+a"        => "6378137",
+     "+b"        => "6378137",
+     "+lat_ts"   => "0.0",
+     "+lon_0"    => "0.0",
+     "+x_0"      => "0.0",
+     "+y_0"      => "0",
+     "+k"        => "1.0",
+     "+units"    => "m",
+     "+nadgrids" => "@null",
+  },
+  flags         => [ "+wktext", "+no_defs" ],
+}
+```
+
+
 ## Contributing
 
 Please report bugs and feature request using [GitHub issue
