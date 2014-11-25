@@ -4,6 +4,7 @@ define proj::epsg (
   $options = {},
   $flags = [],
 ) {
+  require ::proj::augeas
 
   case $ensure {
     'present': {
