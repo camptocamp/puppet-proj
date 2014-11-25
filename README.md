@@ -9,12 +9,20 @@ The proj module allows to configure the [PROJ](http://trac.osgeo.org/proj/) libr
 
 ## Usage
 
+### proj
+
+The `proj` class sets up the PROJ library:
+
+```puppet
+include ::proj
+```
+
 ### proj::epsg
 
 The `proj::epsg` definition allows you to add projections to an EPSG file:
 
 ```puppet
-proj::epsg { '900913':
+::proj::epsg { '900913':
   ensure         => 'present',
   file           => '/opt/myepsg',
   options        => {
