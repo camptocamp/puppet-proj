@@ -6,6 +6,8 @@ define proj::epsg (
 ) {
   require ::proj::augeas
 
+  validate_absolute_path($file)
+
   case $ensure {
     'present': {
       $kv_options = join_keys_to_values($options, ' ')
