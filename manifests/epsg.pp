@@ -13,8 +13,8 @@ define proj::epsg (
       $kv_options = join_keys_to_values($options, ' ')
       $changes = flatten([
         'rm ./*',
-        prefix($kv_options, 'set '),
-        prefix($flags, 'clear ')
+        prefix(sort($kv_options), 'set '),
+        prefix(sort($flags), 'clear ')
         ])
     }
 
