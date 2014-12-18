@@ -1,3 +1,7 @@
+## 2014-12-18 - Release 0.1.3
+
+Various improvements in unit tests
+
 ## 2014-11-25 Release 0.1.2
 ###Summary
 Fix lens name
