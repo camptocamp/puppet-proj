@@ -1,3 +1,8 @@
+## 2015-01-06 - Release 0.1.4
+
+Fix version in metadata.json
+Fix .travis.yml
+
 ## 2014-12-18 - Release 0.1.3
 
 Various improvements in unit tests
