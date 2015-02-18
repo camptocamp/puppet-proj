@@ -14,7 +14,7 @@ define proj::epsg (
       $changes = flatten([
         'rm ./*',
         prefix(sort($kv_options), 'set '),
-        prefix(sort($flags), 'clear ')
+        prefix(sort($flags), 'clear '),
         ])
     }
 
