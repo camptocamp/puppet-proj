@@ -1,19 +1,16 @@
 require 'spec_helper'
 
 describe 'proj' do
-  context 'when on Debian' do
-    let (:facts) { {
-      :osfamily => 'Debian',
-    } }
 
-    it { should compile.with_all_deps }
-  end
+  on_supported_os.each do |os, facts|
+    context "on #{os}" do
+      let(:facts) do
+        facts.merge({
+          :puppetversion => Puppet.version,
+        })
+      end
 
-  context 'when on RedHat' do
-    let (:facts) { {
-      :osfamily => 'RedHat',
-    } }
-
-    it { should compile.with_all_deps }
+        it { is_expected.to compile.with_all_deps }
+    end
   end
 end
