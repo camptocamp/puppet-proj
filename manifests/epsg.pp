@@ -26,7 +26,7 @@ define proj::epsg (
       fail "\$ensure should be 'present' or 'absent', not '${ensure}'"
     }
   }
-  
+
   augeas { "Set up EPSG ${title}":
     incl    => $file,
     lens    => 'EPSG.lns',
